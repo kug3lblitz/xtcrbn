@@ -139,6 +139,7 @@ add_action( 'widgets_init', 'xtcrbn_widgets_init' );
  */
 function xtcrbn_scripts() {
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' );
+	wp_enqueue_style('bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
 	wp_enqueue_style( 'xtcrbn-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'xtcrbn-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'xtcrbn-main', get_template_directory_uri() . '/css/main.css' );

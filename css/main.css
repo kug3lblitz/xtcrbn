@@ -1,4 +1,353 @@
+/*
+INDEX
+--------------
+colors
+globals
+masthead
+*/
+/* colors */
+/* globals */
 p {
   font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+}
+
+a.nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+}
+
+.primaryfont {
+  font-family: "Montserrat", sans-serif;
+}
+
+.orange {
+  color: #f26002;
+}
+
+.lightondark {
+  color: white;
+}
+
+.darkonlight {
+  color: black;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.btn-orange {
+  background: #f26002;
+  color: white;
+}
+
+/* masthead */
+header.masthead {
+  position: relative;
+  background-color: gray;
+  background: url("../assets/img/cfiber.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead:before {
+  content: '';
+  position: absolute;
+  background-color: #7f7f7f;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+header.masthead h2 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h2 {
+    font-size: 2.5rem;
+  }
+}
+
+header.masthead .brandimg img {
+  max-width: 100%;
+}
+
+header.masthead .buttonContainer {
+  padding-top: 70px;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+header.masthead .button {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  display: block;
+  height: 97%;
+  width: 98%;
+  margin: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: #874318d4;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Audiowide', cursive;
+  z-index: 1;
+}
+
+header.masthead .button p {
+  font-size: 1em;
+}
+
+header.masthead .border {
+  position: absolute;
+  display: block;
+  top: -50%;
+  left: -50%;
+  z-index: 0;
+  display: block;
+  height: 280%;
+  width: 170%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, black), color-stop(40%, black), color-stop(50%, #ffffff), color-stop(55%, #ffffff), color-stop(70%, black), to(black));
+  background: linear-gradient(to right, black 20%, black 40%, #ffffff 50%, #ffffff 55%, black 70%, black 100%);
+  background-size: 200% auto;
+  -webkit-animation: shine 3s linear infinite;
+          animation: shine 3s linear infinite;
+}
+
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+header.masthead .button p {
+  position: relative;
+  margin-top: 1.5em;
+}
+
+header.masthead .button:hover {
+  font-size: 1.1em;
+  -webkit-transition: font-size ease 0.3s;
+  transition: font-size ease 0.3s;
+}
+
+/* showcase */
+.showcase {
+  padding: 2em 0 1em 0;
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+.showcase h5.primaryfont {
+  font-weight: 300;
+}
+
+.showcase h2 {
+  text-transform: uppercase;
+}
+
+.showcase .buttonrows .row {
+  padding: 0 0 1em 0;
+}
+
+.showcase .orangeLabel {
+  font-size: 1.6em;
+  background: #f26002;
+  margin: 0.5em;
+  padding: 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+.showcase .orangeLabel:hover {
+  background: #f29202;
+  -webkit-transition: background ease-out 0.3s;
+  transition: background ease-out 0.3s;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+/* about brand */
+.aboutbrand {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.aboutbrand .patrickLogo img {
+  height: auto;
+  max-width: 25%;
+}
+
+.aboutbrand .smLogo img {
+  height: auto;
+  width: 100%;
+}
+
+.aboutbrand .testimonial-item {
+  max-width: 18rem;
+}
+
+.aboutbrand .testimonial-item img {
+  max-width: 12rem;
+  -webkit-box-shadow: 0px 5px 5px 0px gray;
+          box-shadow: 0px 5px 5px 0px gray;
+}
+
+/* jumbo image section */
+section.jumboImage {
+  height: 35em;
+  width: 100%;
+  background-image: url(https://oandrlandscaping.com/wp-content/uploads/2019/11/slider-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Call to action */
+.call-to-action {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, white), color-stop(40%, #f26002));
+  background-image: linear-gradient(white 60%, #f26002 40%);
+  background-size: cover;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+}
+
+.call-to-action .beforeMessage h2 {
+  text-transform: uppercase;
+  font-size: 1.8em;
+}
+
+.call-to-action .messageForm {
+  background: white;
+  padding: 3em 1em;
+  margin-bottom: 5em;
+  border-radius: 1%;
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 0px 5px 5px grey;
+          box-shadow: 0px 5px 5px grey;
+}
+
+.call-to-action .social {
+  position: absolute;
+  bottom: -20%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.call-to-action .social p {
+  color: white;
+  font-size: 1.6em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.call-to-action .social a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .call-to-action .messageForm {
+    margin-top: -6em;
+  }
+  .call-to-action .social {
+    bottom: -30%;
+  }
+}
+
+.call-to-action .formrow {
+  margin: 1.25em;
+}
+
+.call-to-action .formrow input {
+  border: 1px solid;
+}
+
+.call-to-action .formrow textarea {
+  border: 1px solid;
+}
+
+.call-to-action #submitButton {
+  text-transform: uppercase;
+}
+
+.call-to-action:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+/* final content */
+section.finalcontent {
+  position: relative;
+  background-color: darkgray;
+  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+section.finalcontent p {
+  margin-bottom: 3rem;
+}
+
+section.finalcontent:before {
+  content: '';
+  position: absolute;
+  background-color: #a0958f;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+/* footer */
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+footer img {
+  max-width: 60%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,350 @@
 $primaryFont: 'Montserrat', sans-serif;
 $secondaryFont: 'Audiowide', sans-serif;
 
+/*
+INDEX
+--------------
+colors
+globals
+masthead
+*/
+
+/* colors */
+$primary: #fff;
+$tint: #020202;
+$lightTint: #ffd5bd;
+$orange: #f26002;
+
+/* globals */
+
 p {
 	font-family: $primaryFont;
+    font-size: 1.2em;
+}
+
+a.nav-link {
+    font-family: $primaryFont;
+    font-size: 1.2em;
+}
+
+.primaryfont {
+    font-family: $primaryFont;
+}
+
+.orange {
+    color: $orange;
+}
+
+.lightondark {
+    color: white;
+}
+
+.darkonlight {
+    color: black;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.btn-orange {
+    background: $orange;
+    color: white;
+}
+
+/* masthead */
+
+header.masthead {
+    position: relative;
+    background-color: gray;
+    background: url('../assets/img/cfiber.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: mix(darkgray, $tint, 75%);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-family: $primaryFont;
+    }
+
+    @media (min-width: 768px) {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .brandimg img {
+        max-width: 100%;
+    }
+
+    .buttonContainer {
+        padding-top: 70px;
+        width: 200px;
+        height: 50px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .button {
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        display: block;
+        height: 97%;
+        width: 98%;
+        margin: auto;
+        align-self: center;
+        background: #874318d4;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Audiowide', cursive;
+        z-index: 1;
+    }
+
+    .button p  {
+        font-size: 1em;
+    }
+
+    .border {
+        position: absolute;
+        display: block;
+        top: -50%;
+        left: -50%;
+        z-index: 0;
+        display: block;
+        height: 280%;
+        width: 170%;
+        transform: rotate(-45deg);
+        overflow: hidden;
+        background: linear-gradient(to right, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 40%, #ffffff 50%, #ffffff 55%, rgb(0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+        background-size: 200% auto;
+
+        animation: shine 3s linear infinite;
+    }
+
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    .button p {
+        position: relative;
+        margin-top: 1.5em;
+    }
+
+    .button:hover {
+        font-size: 1.1em;
+        transition: font-size ease 0.3s;
+    }
+}
+
+/* showcase */
+
+.showcase {
+    padding: 2em 0 1em 0;
+
+    .showcase-text {
+        padding: 3rem;
+    }
+
+    .showcase-img {
+        min-height: 30rem;
+        background-size: cover;
+    }
+
+    h5.primaryfont {
+        font-weight: 300;
+    }
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    .buttonrows .row {
+        padding: 0 0 1em 0;
+    }
+
+    .orangeLabel {
+        font-size: 1.6em;
+        background: $orange;
+        margin: 0.5em;
+        padding: 0.5em;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    .orangeLabel:hover {
+        background: #f29202;
+        transition: background ease-out 0.3s;
+    }
+
+    @media (min-width: 768px) {
+        .showcase-text {
+            padding: 7rem;
+        }
+    }
+}
+
+/* about brand */
+
+.aboutbrand {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    .patrickLogo img {
+        height: auto;
+        max-width: 25%;
+    }
+
+    .smLogo img {
+        height: auto;
+        width: 100%;
+    }
+
+    .testimonial-item {
+        max-width: 18rem;
+
+        img {
+            max-width: 12rem;
+            box-shadow: 0px 5px 5px 0px gray;
+        }
+    }
+}
+
+/* jumbo image section */
+
+section.jumboImage {
+    height: 35em;
+    width: 100%;
+    background-image: url(https://oandrlandscaping.com/wp-content/uploads/2019/11/slider-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Call to action */
+
+.call-to-action {
+    position: relative;
+    background-image: linear-gradient(white 60%, $orange 40%);
+    background-size: cover;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+
+    .beforeMessage h2 {
+        text-transform: uppercase;
+        font-size: 1.8em;
+    }
+
+    .messageForm {
+        background: white;
+        padding: 3em 1em;
+        margin-bottom: 5em;
+        border-radius: 1%;
+        border: 1px solid lightgray;
+        box-shadow: 0px 5px 5px grey;
+    }
+
+    .social {
+        position: absolute;
+        bottom: -20%;
+        list-style-type: none;
+        padding: 0;
+        p {
+            color: white;
+            font-size: 1.6em;
+            font-family: $primaryFont;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .messageForm {
+            margin-top: -6em;
+        }
+
+        .social {
+            bottom: -30%;
+        }
+    }
+
+    .formrow {
+        margin: 1.25em;
+    }
+
+    .formrow input {
+        border: 1px solid;
+    }
+
+    .formrow textarea {
+        border: 1px solid;
+    }
+
+    #submitButton {
+        text-transform: uppercase;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+    }
+}
+
+/* final content */
+
+section.finalcontent {
+    position: relative;
+    background-color: darkgray;
+    background: url('../assets/img/bg-masthead.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    p {
+        margin-bottom: 3rem;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: mix(gray, $lightTint, 75%);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+    }
+}
+
+/* footer */
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+footer img {
+    max-width: 60%;
 }
