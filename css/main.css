@@ -12,6 +12,19 @@ p {
   font-size: 1.2em;
 }
 
+.page {
+  margin: 0;
+}
+
+h1.entry-title {
+  visibility: hidden;
+  display: none;
+}
+
+.main-navigation li {
+  margin: 0 2em;
+}
+
 a.nav-link {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2em;
@@ -35,6 +48,7 @@ a.nav-link {
 
 h2 {
   font-size: 2.5rem;
+  font-family: "Audiowide", sans-serif;
 }
 
 .btn-orange {
@@ -42,20 +56,45 @@ h2 {
   color: white;
 }
 
+li a {
+  font-family: "Audiowide", sans-serif;
+  color: white !important;
+  text-decoration: none;
+}
+
+li a :visited {
+  color: white;
+  text-decoration: none;
+}
+
 /* masthead */
+@media screen and (max-width: 1480px) {
+  header.masthead video {
+    visibility: hidden;
+    display: none;
+  }
+  header.masthead {
+    background-image: url("https://www.blendernation.com/wp-content/uploads/2020/04/carbon_fiber.jpg");
+    background-size: cover;
+  }
+}
+
 header.masthead {
   position: relative;
   background-color: gray;
-  background: url("../assets/img/cfiber.jpg") no-repeat center center;
-  background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+
+header.masthead video {
+  top: 0;
+  width: 100%;
 }
 
 header.masthead:before {
   content: '';
   position: absolute;
-  background-color: #7f7f7f;
+  background-color: #2b2b2b;
   height: 100%;
   width: 100%;
   top: 0;
@@ -65,7 +104,6 @@ header.masthead:before {
 
 header.masthead h2 {
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -111,6 +149,7 @@ header.masthead .button {
 
 header.masthead .button p {
   font-size: 1em;
+  font-family: "Audiowide", sans-serif;
 }
 
 header.masthead .border {
@@ -155,9 +194,22 @@ header.masthead .button:hover {
   transition: font-size ease 0.3s;
 }
 
+.about {
+  z-index: 1;
+  position: relative;
+  background: white;
+  padding-bottom: 2em;
+  margin-top: 3rem;
+}
+
+.blackoutline {
+  border: 1px solid black;
+}
+
 /* showcase */
 .showcase {
-  padding: 2em 0 1em 0;
+  padding: 4em 0 1em 0;
+  position: relative;
 }
 
 .showcase .showcase-text {
@@ -184,6 +236,7 @@ header.masthead .button:hover {
 .showcase .orangeLabel {
   font-size: 1.6em;
   background: #f26002;
+  font-family: "Audiowide", sans-serif;
   margin: 0.5em;
   padding: 0.5em;
   -webkit-box-align: center;
@@ -234,7 +287,6 @@ header.masthead .button:hover {
 section.jumboImage {
   height: 35em;
   width: 100%;
-  background-image: url(https://oandrlandscaping.com/wp-content/uploads/2019/11/slider-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -242,8 +294,7 @@ section.jumboImage {
 /* Call to action */
 .call-to-action {
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, white), color-stop(40%, #f26002));
-  background-image: linear-gradient(white 60%, #f26002 40%);
+  background-image: linear-gradient(173deg, white 49.5%, #f26002 50.5%);
   background-size: cover;
   padding-top: 3rem;
   padding-bottom: 10rem;

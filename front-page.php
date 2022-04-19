@@ -17,6 +17,9 @@ get_header();
 
 	<main id="primary" class="site-main custom-background">
 		<header class="masthead">
+			<video autoplay="autoplay" loop="loop" muted class="position-absolute"> 
+				<source src="<?php echo get_template_directory_uri();?>/img/xtcrbn-hero-video.mp4" type="video/mp4" />
+			</video>
 			<div class="container position-relative">
 				<div class="row justify-content-center">
 					<div class="col-sm-10 text-center brandimg"><img src="<?php echo get_template_directory_uri();?>/img/XTCrbn-Logo-Primary.png" alt="" srcset="" /></div>
@@ -36,7 +39,7 @@ get_header();
 				</div>
 			</div>
 		</header>
-		<section class="text-center my-5">
+		<section class="text-center about">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-lg-10 my-5">
@@ -52,16 +55,16 @@ get_header();
 				<div class="row justify-content-center">
 					<div class="col-lg-10 text-center">
 						<div class="row justify-content-center showcaseHeader">
-							<h2 class="lightondark primaryfont col-sm-10 col-lg-5 text-end">
+							<h2 class="lightondark secondaryFont col-sm-10 col-lg-5 text-end">
 								<span class="orange">700</span>
 								% Stronger
 							</h2>
-							<h2 class="lightondark primaryfont col-sm-10 col-lg-5 text-start">
+							<h2 class="lightondark secondaryFont col-sm-10 col-lg-5 text-start">
 								<span class="orange">500</span>
 								% Lighter
 							</h2>
 						</div>
-						<div class="row justify-content-center"><h5 class="lightondark primaryfont">Compared to towers on the water today</h5></div>
+						<div class="row justify-content-center"><h5 class="lightondark secondaryFont">Compared to towers on the water today</h5></div>
 					</div>
 				</div>
 				<div class="container buttonrows">
@@ -102,7 +105,7 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="jumboImage"></section>
+		<section class="jumboImage" style="background-image: url('https://images.pexels.com/photos/1603455/pexels-photo-1603455.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200');"></section>
 		<!-- Call to Action-->
 		<section class="call-to-action text-center">
 			<div class="container position-relative">
