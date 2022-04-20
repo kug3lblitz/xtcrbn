@@ -71,16 +71,16 @@ function xtcrbn_setup() {
 	);
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'xtcrbn_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
+	// add_theme_support(
+	// 	'custom-background',
+	// 	apply_filters(
+	// 		'xtcrbn_custom_background_args',
+	// 		array(
+	// 			'default-color' => 'ffffff',
+	// 			'default-image' => '',
+	// 		)
+	// 	)
+	// );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -134,6 +134,12 @@ function xtcrbn_widgets_init() {
 }
 add_action( 'widgets_init', 'xtcrbn_widgets_init' );
 
+/* customizer */
+// function xtcrbn_customize_register( $wp_customize ) {
+// 	//actions
+// }
+add_action( 'customize_register', 'xtcrbn_customize_register' );
+
 /**
  * Enqueue scripts and styles.
  */
@@ -148,6 +154,7 @@ function xtcrbn_scripts() {
 
 	wp_enqueue_script( 'bootstrapjs', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' );
 	wp_enqueue_script( 'xtcrbn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

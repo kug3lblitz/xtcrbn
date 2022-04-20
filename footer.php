@@ -36,7 +36,7 @@
 					<ul class="list-inline mb-2">
 						<li class="list-inline-item"><a href="<? echo get_home_url();?>/terms-conditions">Terms &amp; Conditions</a></li>
 						<li class="list-inline-item">|</li>
-						<li class="list-inline-item"><a href="<? echo get_home_url();?>/privacy-policy">Privacy Policy</a></li>
+						<li class="list-inline-item"><a href="<? echo get_home_url();?>/privacy-policy-2">Privacy Policy</a></li>
 					</ul>
 					<p class="text-muted small mb-4 mb-lg-0">&copy; 2022 XTCRBN. All Rights Reserved.</p>
 				</div>

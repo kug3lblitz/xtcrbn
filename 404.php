@@ -12,18 +12,20 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-	<div class="container">
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'xtcrbn' ); ?></h1>
-			</header><!-- .page-header -->
+		<div class="container text-center">
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 style="font-size: 5em";>404 - Page Not Found</h1>
+					<section class="jumboImage" style="background-image: url('<? echo get_template_directory_uri()?>/img/thescream.jpg'); background-position: bottom;"></section>
+				</header><!-- .page-header -->
 
-			<div class="page-content">
-				<h2><?php esc_html_e( '404 NO CONTENT FOUND.' ); ?></h2>
+				<div class="page-content">
+					<br>
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
 
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-	</div>
+		</div>
+
 
 	</main><!-- #main -->
 

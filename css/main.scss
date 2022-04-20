@@ -17,6 +17,19 @@ $orange: #f26002;
 
 /* globals */
 
+.home {
+    background-color: $tint;
+}
+
+main {
+    overflow: hidden;
+}
+
+#page {
+    max-width: 2430px;
+    margin: 0 auto;
+}
+
 p {
 	font-family: $primaryFont;
     font-size: 1.2em;
@@ -95,10 +108,12 @@ header.masthead {
     background-color: gray;
     padding-top: 8rem;
     padding-bottom: 8rem;
+    max-height: 845px;
 
     video {
         top: 0;
         width: 100%;
+        overflow: hidden;
     }
 
     &:before {
@@ -291,12 +306,19 @@ section.jumboImage {
 
 /* Call to action */
 
+@media screen and (max-width: 1034px) {
+    .call-to-action {
+        background: linear-gradient(173deg, white 49.5%, $orange 50.5%) !important;
+    }
+}
+
 .call-to-action {
     position: relative;
-    background-image: linear-gradient(173deg, white 49.5%, $orange 50.5%);
-    background-size: cover;
     padding-top: 3rem;
     padding-bottom: 10rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: white;
 
     .beforeMessage h2 {
         text-transform: uppercase;
