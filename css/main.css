@@ -1,10 +1,3 @@
-/*
-INDEX
---------------
-colors
-globals
-masthead
-*/
 /* colors */
 /* globals */
 .home {
@@ -34,6 +27,12 @@ h1.entry-title {
   display: none;
 }
 
+.home #site-navigation {
+  background: transparent !important;
+  position: absolute;
+  z-index: 1;
+}
+
 .main-navigation li {
   margin: 0 2em;
 }
@@ -47,6 +46,10 @@ a.nav-link {
   font-family: "Montserrat", sans-serif;
 }
 
+.secondaryfont {
+  font-family: "Audiowide", sans-serif;
+}
+
 .orange {
   color: #f26002;
 }
@@ -57,6 +60,11 @@ a.nav-link {
 
 .darkonlight {
   color: black;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Audiowide", sans-serif;
 }
 
 h2 {
@@ -97,7 +105,7 @@ header.masthead {
   background-color: gray;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  max-height: 845px;
+  height: 100vh;
 }
 
 header.masthead video {
@@ -117,7 +125,7 @@ header.masthead:before {
   opacity: 0.5;
 }
 
-header.masthead h2 {
+header.masthead h1 {
   font-size: 2rem;
 }
 
@@ -126,13 +134,15 @@ header.masthead h2 {
     padding-top: 12rem;
     padding-bottom: 12rem;
   }
-  header.masthead h2 {
+  header.masthead h1 {
     font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }
 
 header.masthead .brandimg img {
-  max-width: 100%;
+  width: 500px;
 }
 
 header.masthead .buttonContainer {
@@ -146,7 +156,7 @@ header.masthead .buttonContainer {
 
 header.masthead .button {
   position: absolute;
-  top: 1%;
+  top: 2%;
   left: 1%;
   display: block;
   height: 97%;
@@ -155,7 +165,7 @@ header.masthead .button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background: #874318d4;
+  background: #f26002;
   color: white;
   text-transform: uppercase;
   font-family: 'Audiowide', cursive;
@@ -214,7 +224,6 @@ header.masthead .button:hover {
   position: relative;
   background: white;
   padding-bottom: 2em;
-  margin-top: 3rem;
 }
 
 .blackoutline {
@@ -236,12 +245,16 @@ header.masthead .button:hover {
   background-size: cover;
 }
 
-.showcase h5.primaryfont {
-  font-weight: 300;
+.showcase span.secondaryFont {
+  text-transform: uppercase;
+  font-size: 1.2em;
 }
 
-.showcase h2 {
+.showcase p {
   text-transform: uppercase;
+  font-family: "Audiowide", sans-serif;
+  font-size: 2.5em;
+  margin: 0;
 }
 
 .showcase .buttonrows .row {
@@ -251,7 +264,7 @@ header.masthead .button:hover {
 .showcase .orangeLabel {
   font-size: 1.6em;
   background: #f26002;
-  font-family: "Audiowide", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0.5em;
   padding: 0.5em;
   -webkit-box-align: center;
@@ -274,13 +287,11 @@ header.masthead .button:hover {
 
 /* about brand */
 .aboutbrand {
-  padding-top: 7rem;
   padding-bottom: 7rem;
 }
 
 .aboutbrand .patrickLogo img {
   height: auto;
-  max-width: 25%;
 }
 
 .aboutbrand .smLogo img {
@@ -337,6 +348,41 @@ section.jumboImage {
           box-shadow: 0px 5px 5px grey;
 }
 
+.call-to-action .messageForm form p {
+  margin: 0;
+  position: relative;
+}
+
+.call-to-action .messageForm form span {
+  width: 100%;
+}
+
+.call-to-action .messageForm form input[type="text"] {
+  width: 100%;
+}
+
+.call-to-action .messageForm form input[type="email"] {
+  width: 100%;
+}
+
+.call-to-action .messageForm form input[type="submit"] {
+  width: 100%;
+  background: #f26002;
+  color: white;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 700;
+}
+
+.call-to-action .messageForm form textarea {
+  height: 100px;
+}
+
+.call-to-action .messageForm form label {
+  text-align: left;
+  position: relative;
+  width: 100%;
+}
+
 .call-to-action .social {
   position: absolute;
   bottom: -20%;
@@ -347,11 +393,12 @@ section.jumboImage {
 .call-to-action .social p {
   color: white;
   font-size: 1.6em;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Audiowide", sans-serif;
 }
 
 .call-to-action .social a {
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (min-width: 1200px) {
@@ -361,22 +408,6 @@ section.jumboImage {
   .call-to-action .social {
     bottom: -30%;
   }
-}
-
-.call-to-action .formrow {
-  margin: 1.25em;
-}
-
-.call-to-action .formrow input {
-  border: 1px solid;
-}
-
-.call-to-action .formrow textarea {
-  border: 1px solid;
-}
-
-.call-to-action #submitButton {
-  text-transform: uppercase;
 }
 
 .call-to-action:before {
@@ -402,6 +433,10 @@ section.finalcontent p {
   margin-bottom: 3rem;
 }
 
+section.finalcontent .ctabtn {
+  border-radius: 0;
+}
+
 section.finalcontent:before {
   content: '';
   position: absolute;
@@ -417,6 +452,10 @@ section.finalcontent:before {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.socialrow {
+  margin-bottom: 3rem !important;
 }
 
 footer img {

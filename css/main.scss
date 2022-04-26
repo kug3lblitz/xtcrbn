@@ -1,14 +1,6 @@
 $primaryFont: 'Montserrat', sans-serif;
 $secondaryFont: 'Audiowide', sans-serif;
 
-/*
-INDEX
---------------
-colors
-globals
-masthead
-*/
-
 /* colors */
 $primary: #fff;
 $tint: #020202;
@@ -44,6 +36,12 @@ h1.entry-title {
     display: none;
 }
 
+.home #site-navigation {
+    background: transparent !important;
+    position: absolute;
+    z-index: 1;
+}
+
 .main-navigation li {
     margin: 0 2em;
 }
@@ -57,6 +55,10 @@ a.nav-link {
     font-family: $primaryFont;
 }
 
+.secondaryfont {
+    font-family: $secondaryFont;
+}
+
 .orange {
     color: $orange;
 }
@@ -67,6 +69,11 @@ a.nav-link {
 
 .darkonlight {
     color: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: $secondaryFont;
 }
 
 h2 {
@@ -108,7 +115,8 @@ header.masthead {
     background-color: gray;
     padding-top: 8rem;
     padding-bottom: 8rem;
-    max-height: 845px;
+    // max-height: 845px;
+    height: 100vh;
 
     video {
         top: 0;
@@ -127,7 +135,7 @@ header.masthead {
         opacity: 0.5;
     }
 
-    h2 {
+    h1 {
         font-size: 2rem;
     }
 
@@ -135,13 +143,15 @@ header.masthead {
         padding-top: 12rem;
         padding-bottom: 12rem;
 
-        h2 {
+        h1 {
             font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
     }
 
     .brandimg img {
-        max-width: 100%;
+        width: 500px;
     }
 
     .buttonContainer {
@@ -155,14 +165,14 @@ header.masthead {
 
     .button {
         position: absolute;
-        top: 1%;
+        top: 2%;
         left: 1%;
         display: block;
         height: 97%;
         width: 98%;
         margin: auto;
         align-self: center;
-        background: #874318d4;
+        background: #f26002;
         color: white;
         text-transform: uppercase;
         font-family: 'Audiowide', cursive;
@@ -213,7 +223,6 @@ header.masthead {
     position: relative;
     background: white;
     padding-bottom: 2em;
-    margin-top: 3rem;
 }
 
 .blackoutline {
@@ -235,12 +244,16 @@ header.masthead {
         background-size: cover;
     }
 
-    h5.primaryfont {
-        font-weight: 300;
+    span.secondaryFont {
+        text-transform: uppercase;
+        font-size: 1.2em;
     }
 
-    h2 {
+    p {
         text-transform: uppercase;
+        font-family: $secondaryFont;
+        font-size: 2.5em;
+        margin: 0;
     }
 
     .buttonrows .row {
@@ -250,7 +263,7 @@ header.masthead {
     .orangeLabel {
         font-size: 1.6em;
         background: $orange;
-        font-family: $secondaryFont;
+        font-family: $primaryFont;
         margin: 0.5em;
         padding: 0.5em;
         align-items: center;
@@ -272,12 +285,10 @@ header.masthead {
 /* about brand */
 
 .aboutbrand {
-    padding-top: 7rem;
     padding-bottom: 7rem;
 
     .patrickLogo img {
         height: auto;
-        max-width: 25%;
     }
 
     .smLogo img {
@@ -332,6 +343,36 @@ section.jumboImage {
         border-radius: 1%;
         border: 1px solid lightgray;
         box-shadow: 0px 5px 5px grey;
+
+        form p {
+            margin: 0;
+            position: relative;
+        }
+        form span {
+            width: 100%;
+        }
+        form input[type="text"] {
+            width: 100%;
+        }
+        form input[type="email"] {
+            width: 100%;
+        }
+        form input[type="submit"] {
+            width: 100%;
+            background: $orange;
+            color: white;
+            font-family: $secondaryFont;
+            font-weight: 700;
+        }
+        form textarea {
+            height: 100px;
+        }
+        form label {
+            text-align: left;
+            position: relative;
+            width: 100%;
+        }
+
     }
 
     .social {
@@ -342,10 +383,11 @@ section.jumboImage {
         p {
             color: white;
             font-size: 1.6em;
-            font-family: $primaryFont;
+            font-family: $secondaryFont;
         }
         a {
             text-decoration: none;
+            font-family: $primaryFont;
         }
     }
 
@@ -357,22 +399,6 @@ section.jumboImage {
         .social {
             bottom: -30%;
         }
-    }
-
-    .formrow {
-        margin: 1.25em;
-    }
-
-    .formrow input {
-        border: 1px solid;
-    }
-
-    .formrow textarea {
-        border: 1px solid;
-    }
-
-    #submitButton {
-        text-transform: uppercase;
     }
 
     &:before {
@@ -391,13 +417,16 @@ section.jumboImage {
 section.finalcontent {
     position: relative;
     background-color: darkgray;
-    background: url('../assets/img/bg-masthead.jpg') no-repeat center center;
     background-size: cover;
     padding-top: 8rem;
     padding-bottom: 8rem;
 
     p {
         margin-bottom: 3rem;
+    }
+
+    .ctabtn {
+        border-radius: 0;
     }
 
     &:before {
@@ -417,6 +446,10 @@ section.finalcontent {
 footer.footer {
     padding-top: 4rem;
     padding-bottom: 4rem;
+}
+
+.socialrow {
+    margin-bottom: 3rem !important;
 }
 
 footer img {
