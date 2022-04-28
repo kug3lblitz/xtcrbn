@@ -1,7 +1,78 @@
+@charset "UTF-8";
 /* colors */
 /* globals */
+/*HERO Scroll Arrow*/
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 70px;
+}
+
+.arrows path {
+  stroke: #fff;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari 和 Chrome */
+}
+
 .home {
   background-color: #020202;
+}
+
+.bg-light {
+  background: #fff !important;
 }
 
 main {
@@ -31,10 +102,26 @@ h1.entry-title {
   background: transparent !important;
   position: absolute;
   z-index: 1;
+  margin-top: 1em;
 }
 
 .main-navigation li {
   margin: 0 2em;
+}
+
+@media screen and (max-width: 599px) {
+  #submenu {
+    display: block !important;
+  }
+  .row p {
+    text-align: left !important;
+  }
+  p.text-muted {
+    text-align: center !important;
+  }
+  #getStarted p {
+    text-align: center !important;
+  }
 }
 
 a.nav-link {
@@ -48,6 +135,7 @@ a.nav-link {
 
 .secondaryfont {
   font-family: "Audiowide", sans-serif;
+  text-transform: uppercase;
 }
 
 .orange {
@@ -95,7 +183,6 @@ li a :visited {
     display: none;
   }
   header.masthead {
-    background-image: url("https://www.blendernation.com/wp-content/uploads/2020/04/carbon_fiber.jpg");
     background-size: cover;
   }
 }
@@ -141,6 +228,10 @@ header.masthead h1 {
   }
 }
 
+header.masthead .brandimg {
+  height: 150px;
+}
+
 header.masthead .brandimg img {
   width: 500px;
 }
@@ -165,7 +256,7 @@ header.masthead .button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background: #f26002;
+  background: #ff7600cf;
   color: white;
   text-transform: uppercase;
   font-family: 'Audiowide', cursive;
@@ -248,6 +339,7 @@ header.masthead .button:hover {
 .showcase span.secondaryFont {
   text-transform: uppercase;
   font-size: 1.2em;
+  font-family: "Audiowide", sans-serif;
 }
 
 .showcase p {
@@ -255,6 +347,19 @@ header.masthead .button:hover {
   font-family: "Audiowide", sans-serif;
   font-size: 2.5em;
   margin: 0;
+}
+
+@media screen and (max-width: 1360px) {
+  .showcase #slash {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1247px) {
+  .showcase #timer p {
+    width: 100%;
+  }
 }
 
 .showcase .buttonrows .row {
@@ -292,11 +397,19 @@ header.masthead .button:hover {
 
 .aboutbrand .patrickLogo img {
   height: auto;
+  padding: 2em 0;
 }
 
-.aboutbrand .smLogo img {
-  height: auto;
-  width: 100%;
+.aboutbrand .smLogo {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2em;
 }
 
 .aboutbrand .testimonial-item {
@@ -342,10 +455,10 @@ section.jumboImage {
   background: white;
   padding: 3em 1em;
   margin-bottom: 5em;
-  border-radius: 1%;
+  border-radius: 25px;
   border: 1px solid lightgray;
-  -webkit-box-shadow: 0px 5px 5px grey;
-          box-shadow: 0px 5px 5px grey;
+  -webkit-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
 }
 
 .call-to-action .messageForm form p {
@@ -371,6 +484,7 @@ section.jumboImage {
   color: white;
   font-family: "Audiowide", sans-serif;
   font-weight: 700;
+  padding: 1em;
 }
 
 .call-to-action .messageForm form textarea {
@@ -378,14 +492,12 @@ section.jumboImage {
 }
 
 .call-to-action .messageForm form label {
-  text-align: left;
-  position: relative;
-  width: 100%;
+  display: none;
 }
 
 .call-to-action .social {
   position: absolute;
-  bottom: -20%;
+  bottom: -16%;
   list-style-type: none;
   padding: 0;
 }
@@ -399,6 +511,12 @@ section.jumboImage {
 .call-to-action .social a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 783px) and (max-width: 1199px) {
+  .call-to-action .social {
+    bottom: -20%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -440,7 +558,6 @@ section.finalcontent .ctabtn {
 section.finalcontent:before {
   content: '';
   position: absolute;
-  background-color: #a0958f;
   height: 100%;
   width: 100%;
   top: 0;

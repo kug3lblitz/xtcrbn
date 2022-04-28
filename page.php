@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<nav class="navbar navbar-dark bg-dark static-top main-navigation">
-		<ul class="menu">
+		<ul id="submenu" class="menu">
 			<li class="nav-item" style="max-width: 200px;">
 				<a class="nav-link active" aria-current="page" href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/XTCrbn-Logo-Primary.png" alt="" srcset="" /></a>
 			</li>

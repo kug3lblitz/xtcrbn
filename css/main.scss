@@ -9,8 +9,61 @@ $orange: #f26002;
 
 /* globals */
 
+/*HERO Scroll Arrow*/
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 70px;
+}
+
+.arrows path {
+	stroke: #fff;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
 .home {
     background-color: $tint;
+}
+
+.bg-light {
+    background: $primary !important;
 }
 
 main {
@@ -40,10 +93,29 @@ h1.entry-title {
     background: transparent !important;
     position: absolute;
     z-index: 1;
+    margin-top: 1em;
 }
 
 .main-navigation li {
     margin: 0 2em;
+}
+
+@media screen and (max-width: 599px) {
+    #submenu {
+        display: block !important;
+    }
+
+    .row p {
+        text-align: left !important;
+    }
+    
+    p.text-muted {
+        text-align: center !important;
+    }
+
+    #getStarted p {
+        text-align: center !important;
+    }
 }
 
 a.nav-link {
@@ -57,6 +129,7 @@ a.nav-link {
 
 .secondaryfont {
     font-family: $secondaryFont;
+    text-transform: uppercase;
 }
 
 .orange {
@@ -105,7 +178,6 @@ li a {
     }
 
     header.masthead {
-        background-image: url('https://www.blendernation.com/wp-content/uploads/2020/04/carbon_fiber.jpg');
         background-size: cover;
     }
 }
@@ -150,6 +222,10 @@ header.masthead {
         }
     }
 
+    .brandimg {
+        height: 150px;
+    }
+
     .brandimg img {
         width: 500px;
     }
@@ -172,7 +248,7 @@ header.masthead {
         width: 98%;
         margin: auto;
         align-self: center;
-        background: #f26002;
+        background: #ff7600cf;
         color: white;
         text-transform: uppercase;
         font-family: 'Audiowide', cursive;
@@ -247,6 +323,7 @@ header.masthead {
     span.secondaryFont {
         text-transform: uppercase;
         font-size: 1.2em;
+        font-family: $secondaryFont;
     }
 
     p {
@@ -254,6 +331,19 @@ header.masthead {
         font-family: $secondaryFont;
         font-size: 2.5em;
         margin: 0;
+    }
+
+    @media screen and (max-width: 1360px) {
+        #slash {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    @media screen and (max-width: 1247px) {
+        #timer p {
+            width: 100%;
+        }
     }
 
     .buttonrows .row {
@@ -289,11 +379,14 @@ header.masthead {
 
     .patrickLogo img {
         height: auto;
+        padding: 2em 0;
     }
 
-    .smLogo img {
-        height: auto;
-        width: 100%;
+    .smLogo {
+        display: grid;
+        align-items: center;
+        justify-content: center;;
+        margin-top: 2em;
     }
 
     .testimonial-item {
@@ -340,9 +433,9 @@ section.jumboImage {
         background: white;
         padding: 3em 1em;
         margin-bottom: 5em;
-        border-radius: 1%;
+        border-radius: 25px;
         border: 1px solid lightgray;
-        box-shadow: 0px 5px 5px grey;
+        box-shadow: 0px 15px 15px rgba(0,0,0,0.25);
 
         form p {
             margin: 0;
@@ -363,21 +456,20 @@ section.jumboImage {
             color: white;
             font-family: $secondaryFont;
             font-weight: 700;
+            padding: 1em;
         }
         form textarea {
             height: 100px;
         }
         form label {
-            text-align: left;
-            position: relative;
-            width: 100%;
+            display: none;
         }
 
     }
 
     .social {
         position: absolute;
-        bottom: -20%;
+        bottom: -16%;
         list-style-type: none;
         padding: 0;
         p {
@@ -388,6 +480,12 @@ section.jumboImage {
         a {
             text-decoration: none;
             font-family: $primaryFont;
+        }
+    }
+
+    @media screen and (min-width: 783px) and (max-width: 1199px) {
+        .social {
+            bottom: -20%;
         }
     }
 
@@ -432,7 +530,6 @@ section.finalcontent {
     &:before {
         content: '';
         position: absolute;
-        background-color: mix(gray, $lightTint, 75%);
         height: 100%;
         width: 100%;
         top: 0;

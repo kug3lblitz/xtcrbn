@@ -16,7 +16,7 @@ get_header();
 </nav>
 
 <main id="primary" class="site-main">
-	<header class="masthead">
+	<header class="masthead" style="background-image: url(<?php echo get_template_directory_uri();?>/img/hero-poster.jpg);">
 		<video autoplay="autoplay" loop="loop" muted class="position-absolute">
 			<source src="<?php echo get_template_directory_uri(); ?>/img/xtcrbn-hero-video.mp4" type="video/mp4" />
 		</video>
@@ -34,13 +34,24 @@ get_header();
 				<div class="buttonContainer col-xl-2 mx-0 text-center">
 					<div class="border"></div>
 					<a href="#firstContent" style="text-decoration: none;">
-						<div class="button">
+						<div id="getStarted" class="button">
 							<p>Get Started</p>
 						</div>
 					</a>
 				</div>
 			</div>
 		</div>
+
+		<div style="display: flex; justify-content: center;">
+			<a href="#firstContent" aria-label="to content">
+				<svg class="arrows">
+					<path class="a1" d="M0 0 L30 32 L60 0"></path>
+					<path class="a2" d="M0 20 L30 52 L60 20"></path>
+					<path class="a3" d="M0 40 L30 72 L60 40"></path>
+				</svg>
+			</a>
+		</div>
+
 	</header>
 	<section class="text-center about">
 		<div class="container">
@@ -61,7 +72,7 @@ get_header();
 					<div id="timer" class="row justify-content-center showcaseHeader">
 						<p class="lightondark secondaryFont col-sm-10 col-lg-5 text-end">
 							<span class="orange timer count-title count-number" data-to="700" data-speed="1500">0</span>
-							% Stronger
+							% Stronger <span id="slash">/</span>
 						</p>
 						<p class="lightondark secondaryFont col-sm-10 col-lg-5 text-start">
 							<span class="orange timer count-title count-number" data-to="500" data-speed="1500">0</span>
@@ -70,7 +81,7 @@ get_header();
 					</div>
 					<script>
 					const waypoint = new Waypoint({
-						element: document.getElementById('firstContent'),
+						element: document.getElementById('getStarted'),
 						handler: function(direction) {
 
 							(function ($) {
@@ -146,7 +157,7 @@ get_header();
 									decimals: 0,
 									formatter: formatter,
 									onUpdate: null,
-									onComplete: null
+									onComplete: waypoint.destroy()
 								};
 								
 								function formatter(value, settings) {
@@ -183,15 +194,15 @@ get_header();
 			<div class="container buttonrows">
 				<div class="row justify-content-center">
 					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">Improved fuel efficiency</p>
-					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">Long-lasting &amp; highly durable</p>
+					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">Long-lasting &amp; durable</p>
 				</div>
 				<div class="row justify-content-center">
 					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">Increased passenger count</p>
-					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">Reduced quality issues</p>
+					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">Fewer quality issues</p>
 				</div>
 				<div class="row justify-content-center">
-					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">Simplified installation for reduced labor</p>
-					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">No unsightly welds to fatigue</p>
+					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">Easier installation</p>
+					<p class="orangeLabel lightondark text-center col-md-5 col sm-12">No unsightly welds</p>
 				</div>
 			</div>
 		</div>
@@ -199,7 +210,7 @@ get_header();
 	<section class="aboutbrand text-center bg-light">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="patrickLogo"><img src="https://clipground.com/images/placeholder-logo-5.png" alt="" srcset="" /></div>
+				<div class="patrickLogo col-md-6"><img src="<?php echo get_template_directory_uri(); ?>/img/patrick-logo.svg" alt="Patrick Industries Logo" srcset="" /></div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -210,15 +221,15 @@ get_header();
 		</div>
 		<div class="container-fluid">
 			<div class="row justify-content-center">
-				<div class="smLogo col-md-2 col-sm-6"><img src="https://clipground.com/images/placeholder-logo-5.png" alt="" srcset="" /></div>
-				<div class="smLogo col-md-2 col-sm-6"><img src="https://clipground.com/images/placeholder-logo-5.png" alt="" srcset="" /></div>
-				<div class="smLogo col-md-2 col-sm-6"><img src="https://clipground.com/images/placeholder-logo-5.png" alt="" srcset="" /></div>
-				<div class="smLogo col-md-2 col-sm-6"><img src="https://clipground.com/images/placeholder-logo-5.png" alt="" srcset="" /></div>
-				<div class="smLogo col-md-2 col-sm-6"><img src="https://clipground.com/images/placeholder-logo-5.png" alt="" srcset="" /></div>
+				<div class="smLogo col-md-2 col-sm-6"><img src="<?php echo get_template_directory_uri(); ?>/img/sei-logo.png" alt="SEI Manufacturing Logo" srcset="" /></div>
+				<div class="smLogo col-md-2 col-sm-6"><img src="<?php echo get_template_directory_uri(); ?>/img/gg-schmitt-logo.png" alt="GG Schmitt Logo" srcset="" /></div>
+				<div class="smLogo col-md-2 col-sm-6"><img src="<?php echo get_template_directory_uri(); ?>/img/xtp-logo.png" alt="XTP Logo" srcset="" /></div>
+				<div class="smLogo col-md-2 col-sm-6"><img src="<?php echo get_template_directory_uri(); ?>/img/coyote-logo.png" alt="Coyote Logo" srcset="" /></div>
+				<div class="smLogo col-md-2 col-sm-6"><img src="<?php echo get_template_directory_uri(); ?>/img/em&c-logo.png" alt="EM&C Logo" srcset="" /></div>
 			</div>
 		</div>
 	</section>
-	<section class="jumboImage" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/wake-min.jpeg); background-position: center;"></section>
+	<section class="jumboImage" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/xtcrbn-photo-1.jpg); background-position: center;"></section>
 	<!-- Call to Action-->
 	<section id="contact" class="call-to-action text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/wave-background.svg);">
 		<div class="container position-relative">
@@ -228,33 +239,27 @@ get_header();
 					<p>For unlimited design potential and technology, XTCrbn is the clear choice for your carbon fiber marine products. Reach out today with your next project and find out why top boat builders choose carbon fiber solutions from XTCrbn.</p>
 					<ul class="list mb-0 social">
 						<li class="list-item me-4">
-							<p style="margin-bottom: 0;">Other ways to get in touch</p>
+							<p style="margin-bottom: 0; text-transform: uppercase;">Other ways to get in touch</p>
 						</li>
 						<li class="list-item me-4">
 							<a href="tel:+14043759762"><i class="bi-telephone-fill fs-4">&nbsp;(404) 375-9762</i></a>
 						</li>
 						<li class="list-item me-4">
-							<a href="mailto:info@xtcrbn.com"><i class="bi-mailbox2 fs-4">&nbsp;info@xtcrbn.com</i></a>
+							<a href="mailto:info@xtcrbn.com"><i class="bi-envelope-fill fs-4">&nbsp;info@xtcrbn.com</i></a>
 						</li>
 						<li class="list-item">
-							<a href="#!"><i class="bi-map fs-4">&nbsp;412 N Cedar Bluff Rd. Ste 108 Knoxville, TN, USA</i></a>
+							<a href="#!"><i class="bi-house-door-fill fs-4">&nbsp;1651 Riverwalk Rd. Bishop, GA 30621</i></a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-xl-6 col-sm-12 messageForm">
-					<!-- Email address input-->
-					<!-- <div class="row formrow"><input type="text" placeholder="Name" /></div>
-					<div class="row formrow"><input type="email" placeholder="Email" /></div>
-					<div class="row formrow"><input type="text" placeholder="Subject" /></div>
-					<div class="row formrow"><textarea placeholder="Message"></textarea></div>
-					<div class="row formrow"><button class="btn btn-orange btn-lg primaryfont" id="submitButton" type="submit">Submit</button></div> -->
-					<?php echo do_shortcode('[contact-form-7 id="32" title="Contact form 1"]'); ?>
+					<?php echo do_shortcode('[contact-form-7 id="34" title="Contact form 1"]'); ?>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- jobs-->
-	<section id="careers" class="finalcontent bg-light text-center" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/jobs-min.jpg); background-position: center;">
+	<section id="careers" class="finalcontent text-center" style="background: linear-gradient(rgba(255, 255, 255, .75),rgba(255, 255, 255, .75)), url(<?php echo get_template_directory_uri(); ?>/img/xtcrbn-photo-2.jpg);">
 		<div class="container position-relative">
 			<div class="row justify-content-center">
 				<div class="col-xl-6">
